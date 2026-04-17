@@ -1,1 +1,328 @@
-"<h1>Welcome to my portfolio</h1>" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POSTER SYNDICATE — Visual Design by NAV</title>
+  <meta name="description" content="Portfolio of NAV - graphic designer specializing in poster art and album cover design. Raw. Loud. Intentional." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── CUSTOM CURSOR ─── -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-dot"></div>
+  </div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ─── CURSOR LABEL (follows cursor on gallery hover) ─── -->
+  <div class="cursor-label" id="cursorLabel"></div>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-brand">differential<span class="nav-brand-dot">.</span>deltan</a>
+    <div class="nav-links">
+      <a href="#vault" class="nav-link">Vault</a>
+      <a href="#architect" class="nav-link">Architect</a>
+      <a href="#comms" class="nav-link">Comms</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Selected Works — 2025 – Present</div>
+      <h1 class="hero-title" id="heroTitle">
+        <span class="hero-word">NAVDEEP</span>
+        <span class="hero-word hero-word--accent">SINGH</span>
+      </h1>
+      <div class="hero-sub">
+        <span>Graphic Design</span>
+        <span class="hero-sub-sep">×</span>
+        <span>Poster Art</span>
+        <span class="hero-sub-sep">×</span>
+        <span>Album Covers</span>
+      </div>
+      <a href="#vault" class="hero-cta">
+        <span>Enter The Vault</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <!-- ─── HERO VISUAL DOODLE ─── -->
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="hero-doodle" viewBox="0 0 560 900" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <defs>
+          <pattern id="hdots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <circle cx="20" cy="20" r="1.2" fill="rgba(240,237,232,1)"/>
+          </pattern>
+          <filter id="hglow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Dot grid -->
+        <rect width="560" height="900" fill="url(#hdots)" opacity="0.07"/>
+
+        <!-- Ghost background letter -->
+        <text x="280" y="560" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="500" stroke="rgba(240,237,232,0.028)" stroke-width="2" paint-order="stroke">N</text>
+
+        <!-- Diagonal faint lines -->
+        <line x1="0" y1="160" x2="560" y2="740" stroke="rgba(255,45,120,0.07)" stroke-width="1" stroke-dasharray="4 14"/>
+        <line x1="560" y1="200" x2="0" y2="780" stroke="rgba(57,255,20,0.05)" stroke-width="1" stroke-dasharray="4 14"/>
+
+        <!-- ═══ TARGET SYSTEM — center: 280, 435 ═══ -->
+        <circle cx="280" cy="435" r="255" stroke="rgba(255,45,120,0.07)" stroke-width="1"/>
+        <circle cx="280" cy="435" r="212" stroke="rgba(255,45,120,0.14)" stroke-width="1" stroke-dasharray="3 11" class="ring-spin"/>
+        <circle cx="280" cy="435" r="165" stroke="rgba(255,45,120,0.22)" stroke-width="1.2"/>
+        <circle cx="280" cy="435" r="115" stroke="rgba(255,45,120,0.33)" stroke-width="1.5" stroke-dasharray="5 9" class="ring-spin ring-spin--rev"/>
+        <circle cx="280" cy="435" r="68"  stroke="rgba(255,45,120,0.55)" stroke-width="1.5"/>
+        <circle cx="280" cy="435" r="25"  stroke="#ff2d78" stroke-width="2"/>
+        <circle cx="280" cy="435" r="5"   fill="#ff2d78" class="dot-pulse" filter="url(#hglow)"/>
+
+        <!-- Crosshair -->
+        <line x1="0"   y1="435" x2="560" y2="435" stroke="rgba(255,45,120,0.14)" stroke-width="0.8"/>
+        <line x1="280" y1="0"   x2="280" y2="900" stroke="rgba(255,45,120,0.14)" stroke-width="0.8"/>
+        <!-- H ticks -->
+        <line x1="174" y1="423" x2="174" y2="447" stroke="rgba(255,45,120,0.45)" stroke-width="1.2"/>
+        <line x1="213" y1="427" x2="213" y2="443" stroke="rgba(255,45,120,0.22)" stroke-width="0.8"/>
+        <line x1="347" y1="427" x2="347" y2="443" stroke="rgba(255,45,120,0.22)" stroke-width="0.8"/>
+        <line x1="386" y1="423" x2="386" y2="447" stroke="rgba(255,45,120,0.45)" stroke-width="1.2"/>
+        <!-- V ticks -->
+        <line x1="273" y1="325" x2="287" y2="325" stroke="rgba(255,45,120,0.45)" stroke-width="1.2"/>
+        <line x1="275" y1="370" x2="285" y2="370" stroke="rgba(255,45,120,0.22)" stroke-width="0.8"/>
+        <line x1="275" y1="500" x2="285" y2="500" stroke="rgba(255,45,120,0.22)" stroke-width="0.8"/>
+        <line x1="273" y1="545" x2="287" y2="545" stroke="rgba(255,45,120,0.45)" stroke-width="1.2"/>
+
+        <!-- ═══ FLOATING SHAPES ═══ -->
+        <!-- Top-right dashed rect -->
+        <rect x="392" y="52" width="118" height="82" stroke="rgba(255,45,120,0.28)" stroke-width="1" stroke-dasharray="4 6" transform="rotate(-10 451 93)" class="float-b"/>
+        <!-- Bottom-left solid rect -->
+        <rect x="26" y="692" width="108" height="148" stroke="rgba(57,255,20,0.22)" stroke-width="1" transform="rotate(7 80 766)" class="float-a"/>
+        <!-- Mid-right small rect -->
+        <rect x="442" y="508" width="74" height="52" stroke="rgba(240,237,232,0.15)" stroke-width="1" transform="rotate(-22 479 534)"/>
+        <!-- Top-left small rect -->
+        <rect x="20" y="115" width="88" height="60" stroke="rgba(57,255,20,0.18)" stroke-width="1" transform="rotate(12 64 145)" class="float-b"/>
+
+        <!-- Triangles -->
+        <polygon points="458,700 476,671 494,700" stroke="rgba(255,45,120,0.35)" stroke-width="1.2" class="float-a"/>
+        <polygon points="72,350 90,321 108,350" stroke="rgba(57,255,20,0.28)" stroke-width="1.2" class="float-b"/>
+        <polygon points="490,278 503,257 516,278" stroke="rgba(240,237,232,0.18)" stroke-width="1"/>
+
+        <!-- Diamond -->
+        <polygon points="280,152 293,168 280,184 267,168" stroke="rgba(255,45,120,0.5)" stroke-width="1.5"/>
+
+        <!-- Asterisk (top-right) -->
+        <g transform="translate(488,130)" class="float-b">
+          <line x1="0" y1="-14" x2="0"   y2="14"  stroke="rgba(57,255,20,0.42)" stroke-width="1.5"/>
+          <line x1="-14" y1="0" x2="14"  y2="0"   stroke="rgba(57,255,20,0.42)" stroke-width="1.5"/>
+          <line x1="-10" y1="-10" x2="10" y2="10" stroke="rgba(57,255,20,0.42)" stroke-width="1.5"/>
+          <line x1="10"  y1="-10" x2="-10" y2="10" stroke="rgba(57,255,20,0.42)" stroke-width="1.5"/>
+        </g>
+
+        <!-- Arrow top -->
+        <line x1="240" y1="78" x2="240" y2="40" stroke="rgba(240,237,232,0.2)" stroke-width="1.2"/>
+        <polyline points="232,52 240,40 248,52" stroke="rgba(240,237,232,0.2)" stroke-width="1.2" stroke-linejoin="round"/>
+
+        <!-- ═══ X MARKS ═══ -->
+        <line x1="55"  y1="494" x2="67"  y2="506" stroke="rgba(255,45,120,0.6)" stroke-width="1.5"/>
+        <line x1="67"  y1="494" x2="55"  y2="506" stroke="rgba(255,45,120,0.6)" stroke-width="1.5"/>
+        <line x1="472" y1="365" x2="484" y2="377" stroke="rgba(57,255,20,0.55)" stroke-width="1.5"/>
+        <line x1="484" y1="365" x2="472" y2="377" stroke="rgba(57,255,20,0.55)" stroke-width="1.5"/>
+        <line x1="140" y1="758" x2="149" y2="767" stroke="rgba(240,237,232,0.28)" stroke-width="1"/>
+        <line x1="149" y1="758" x2="140" y2="767" stroke="rgba(240,237,232,0.28)" stroke-width="1"/>
+
+        <!-- Plus marks -->
+        <line x1="440" y1="800" x2="440" y2="820" stroke="rgba(240,237,232,0.22)" stroke-width="1"/>
+        <line x1="430" y1="810" x2="450" y2="810" stroke="rgba(240,237,232,0.22)" stroke-width="1"/>
+        <line x1="108" y1="582" x2="108" y2="598" stroke="rgba(255,45,120,0.32)" stroke-width="1"/>
+        <line x1="100" y1="590" x2="116" y2="590" stroke="rgba(255,45,120,0.32)" stroke-width="1"/>
+
+        <!-- ═══ CORNER BRACKETS ═══ -->
+        <path d="M 22 22 L 22 58 M 22 22 L 62 22"   stroke="rgba(240,237,232,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M 538 22 L 538 58 M 538 22 L 498 22" stroke="rgba(240,237,232,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M 22 878 L 22 842 M 22 878 L 62 878"   stroke="rgba(240,237,232,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M 538 878 L 538 842 M 538 878 L 498 878" stroke="rgba(240,237,232,0.22)" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- ═══ TEXT ANNOTATIONS ═══ -->
+        <text x="34"  y="278" font-family="'Bebas Neue',sans-serif" font-size="30" fill="rgba(255,45,120,0.2)"  letter-spacing="3">01</text>
+        <text x="458" y="622" font-family="'Bebas Neue',sans-serif" font-size="30" fill="rgba(57,255,20,0.18)"  letter-spacing="3">04</text>
+        <text transform="translate(534,472) rotate(90)"  text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="10" fill="rgba(57,255,20,0.45)"  letter-spacing="6">NOISE</text>
+        <text transform="translate(26,432) rotate(-90)" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="10" fill="rgba(255,45,120,0.45)" letter-spacing="6">FORM</text>
+        <text x="296" y="408" font-family="'Inter',sans-serif" font-size="7.5" fill="rgba(240,237,232,0.26)" letter-spacing="1.5">48°23′N / 000°01′E</text>
+        <text x="297" y="462" font-family="'Inter',sans-serif" font-size="7.5" fill="rgba(255,45,120,0.45)"  letter-spacing="1.5">DSN–001</text>
+
+        <!-- Dashed arcs -->
+        <path d="M 60 196 Q 150 102 280 155" stroke="rgba(255,45,120,0.13)" stroke-width="1" stroke-dasharray="3 9"/>
+        <path d="M 490 592 Q 412 764 160 824" stroke="rgba(57,255,20,0.11)"  stroke-width="1" stroke-dasharray="3 9"/>
+
+        <!-- Scattered accent dots -->
+        <circle cx="112" cy="196" r="2.5" fill="rgba(255,45,120,0.45)"/>
+        <circle cx="452" cy="594" r="2.5" fill="rgba(57,255,20,0.45)"/>
+        <circle cx="68"  cy="656" r="1.8" fill="rgba(240,237,232,0.28)"/>
+        <circle cx="490" cy="180" r="1.8" fill="rgba(240,237,232,0.28)"/>
+        <circle cx="378" cy="70"  r="2"   fill="rgba(255,45,120,0.35)"/>
+        <circle cx="162" cy="822" r="2"   fill="rgba(57,255,20,0.35)"/>
+      </svg>
+    </div>
+
+    <div class="hero-scroll-hint">SCROLL DOWN</div>
+    <div class="hero-side-text">VISUAL NOISE / RAW ENERGY / INTENTIONAL CHAOS</div>
+  </section>
+
+  <!-- ─── GALLERY — THE VAULT ─── -->
+  <section class="vault" id="vault">
+    <div class="vault-header">
+      <div class="vault-label">The Vault</div>
+      <h2 class="vault-title">SELECTED <br/><em>WORKS</em></h2>
+    </div>
+
+    <div class="gallery" id="gallery">
+
+      <div class="card card--tall" id="card-0" data-title="leonardo" data-type="Poster Design">
+        <div class="card-img-wrap">
+          <img src="wolf.png" alt="leonardo – Poster Design" loading="lazy" />
+          <div class="card-glitch"></div>
+        </div>
+        <div class="card-info">
+          <span class="card-name">leonardo</span>
+          <span class="card-type">Poster</span>
+        </div>
+      </div>
+
+      <div class="card card--tall" id="card-1" data-title="drake" data-type="Poster Design">
+        <div class="card-img-wrap">
+          <img src="drake.png" alt="drake – Poster Design" loading="lazy" />
+          <div class="card-glitch"></div>
+        </div>
+        <div class="card-info">
+          <span class="card-name">drake</span>
+          <span class="card-type">Poster</span>
+        </div>
+      </div>
+
+      <div class="card card--medium" id="card-2" data-title="space" data-type="Poster Design">
+        <div class="card-img-wrap">
+          <img src="space.png" alt="space – Poster Design" loading="lazy" />
+          <div class="card-glitch"></div>
+        </div>
+        <div class="card-info">
+          <span class="card-name">space</span>
+          <span class="card-type">Poster</span>
+        </div>
+      </div>
+
+      <div class="card card--tall" id="card-3" data-title="fyodor" data-type="Poster Design">
+        <div class="card-img-wrap">
+          <img src="fyodor.png" alt="fyodor – Poster Design" loading="lazy" />
+          <div class="card-glitch"></div>
+        </div>
+        <div class="card-info">
+          <span class="card-name">fyodor</span>
+          <span class="card-type">Poster</span>
+        </div>
+      </div>
+
+      <div class="card card--tall" id="card-4" data-title="youngthug" data-type="Poster Design">
+        <div class="card-img-wrap">
+          <img src="youngthug.png" alt="youngthug – Poster Design" loading="lazy" />
+          <div class="card-glitch"></div>
+        </div>
+        <div class="card-info">
+          <span class="card-name">youngthug</span>
+          <span class="card-type">Poster</span>
+        </div>
+      </div>
+
+      <div class="card card--tall" id="card-5" data-title="nihlist penguin" data-type="Poster Design">
+        <div class="card-img-wrap">
+          <img src="nihlist penguin.png" alt="nihlist penguin – Poster Design" loading="lazy" />
+          <div class="card-glitch"></div>
+        </div>
+        <div class="card-info">
+          <span class="card-name">nihlist penguin</span>
+          <span class="card-type">Poster</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── ABOUT — THE ARCHITECT ─── -->
+  <section class="architect" id="architect">
+    <!-- Scrolling background marquee -->
+    <div class="marquee-bg" aria-hidden="true">
+      <div class="marquee-track">
+        <span>DESIGN&nbsp;/&nbsp;CREATE&nbsp;/&nbsp;DESTROY&nbsp;/&nbsp;REPEAT&nbsp;/&nbsp;</span>
+        <span>DESIGN&nbsp;/&nbsp;CREATE&nbsp;/&nbsp;DESTROY&nbsp;/&nbsp;REPEAT&nbsp;/&nbsp;</span>
+        <span>DESIGN&nbsp;/&nbsp;CREATE&nbsp;/&nbsp;DESTROY&nbsp;/&nbsp;REPEAT&nbsp;/&nbsp;</span>
+        <span>DESIGN&nbsp;/&nbsp;CREATE&nbsp;/&nbsp;DESTROY&nbsp;/&nbsp;REPEAT&nbsp;/&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="architect-inner">
+      <div class="architect-img-wrap" id="parallaxImg">
+        <div class="architect-img-distort">
+          <img src="me.jpeg" alt="Navdeep Singh – Graphic Designer" />
+        </div>
+        <div class="architect-img-label">The Architect</div>
+      </div>
+
+      <div class="architect-text">
+        <div class="architect-label">About</div>
+        <h2 class="architect-heading">I don't <em>make</em> art.<br/>I make <em>statements.</em></h2>
+        <p class="architect-body">
+          Navdeep Singh is a graphic designer operating at the intersection of raw street culture and deliberate visual chaos. 
+          Specialized in poster art and album cover design, the kind that stops scrolling thumbs dead in their tracks.
+        </p>
+        <p class="architect-body">
+          I build visual worlds that bridge the gap between vibrant grandiosity and psychological weight. By blending chaotic textures with precise structure, I transform complex concepts into frames that feel like a scene from a larger, brooding narrative.
+        </p>
+        <div class="architect-stats">
+          <div class="stat">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Posters</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Album Covers</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">8+</span>
+            <span class="stat-label">months</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER — THE COMMS ─── -->
+  <footer class="comms" id="comms">
+    <div class="comms-inner">
+      <div class="comms-eyebrow">Ready to Collab?</div>
+      <a
+        href="https://www.instagram.com/differential.deltan"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="comms-ig"
+        id="igLink"
+      >
+        STALK MY<br/>INSTAGRAM
+      </a>
+      <div class="comms-footer-bar">
+        <span>© 2026 differential.deltan — All rights reserved</span>
+        <span class="comms-footer-tag">Crafted in noise</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
